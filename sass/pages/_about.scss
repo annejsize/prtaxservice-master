@@ -1,0 +1,42 @@
+
+@import "../base/variables";
+
+.about { 
+    background-color: $white;   
+    
+    &_summary {
+        display: flex;
+        flex-direction: row;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+        }
+
+        &-photo {
+            padding: 1rem;
+
+            img {
+                height: 300px;
+                width: auto;
+            }
+        }
+
+        @media only screen and (min-width: $bp-larger) {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }      
+    }
+
+    &_group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    }
+}
+
+.reasons_points {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,64 @@
+@import "../base/variables";
+
+
+.new {
+    background-color: $white;
+}
+
+.faq {
+    background-color: rgba(59, 61, 65, -0.90);
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: block;    
+        padding: 8px 22px;
+        margin: 0 0 1px 0;
+        cursor: pointer;
+        background: #8F66AE;
+        border-radius: 3px;
+        color: #FFF;
+        transition: ease .5s;
+        position: relative;
+    }
+
+    label::after {
+        content: '+';
+        font-size: 2.2rem;
+        font-weight: bold;
+        position: absolute;
+
+        right: 10px;
+        top: 2px;
+    }
+
+    input:checked + label::after {
+        content: '-';
+        right: 14px;
+        top: 3px;
+    }
+    
+    
+    label:hover {
+        background: $color-gray;
+    }
+
+    .content {
+        background: $white;
+        padding: 10px 25px;
+        margin: 0 0 1px 0;
+    }
+
+    input + label + .content {
+        display: none;
+    }
+    
+    input:checked + label + .content {
+        display: block;
+    }
+}
+
+
+

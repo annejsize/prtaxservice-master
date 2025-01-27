@@ -1,0 +1,40 @@
+@import "variables";
+
+
+//RESPONSIVE BREAK POINTS
+
+$bp-largest: 75em; //1200px
+$bp-larger: 62em; //1000px divided by 16
+$bp-large: 55em; //880 px
+
+$bp-medium: 48em; //788
+
+$bp-small: 37.5em; 
+$bp-smaller: 37.18em; // 595px
+$bp-smallest: 34em; //500px
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /*10 rem*/
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    background-color: lighten($color-gray, 60%);
+
+    box-sizing: border-box;
+}
